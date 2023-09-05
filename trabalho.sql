@@ -60,3 +60,13 @@ group by nome;
 select * 
 from quantidade_de_livros
 where total_de_livros_autor >= 2;
+
+-- decimo primeiro --
+
+create view livros_e_autores as
+select titulo,nome
+from livros l 
+join autores a on a.id = l.autor_id;
+
+select *
+from livros_e_autores;
