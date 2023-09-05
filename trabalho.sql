@@ -106,3 +106,16 @@ left join livros on autores.id = livros.autor_id
 group by autores.id
 order by quantidade_de_livros desc
 limit 1;
+
+-- decimo setimo -- 
+select produto, sum(receita) as soma_da_receita
+from vendas 
+group by produto
+having sum(receita) = (
+	select min(total_da_receita)
+    from (
+		select produto, sum(receita) as total_da_receita
+        from vendas 
+        group by produto 
+    ) as receita_gerada_por_cada_produto
+);
