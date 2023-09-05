@@ -70,3 +70,12 @@ join autores a on a.id = l.autor_id;
 
 select *
 from livros_e_autores;
+
+-- decimo segundo -- 
+create view aluno_curso as
+select nome, curso
+from alunos a
+right join matriculas m on m.id  = a.id;
+
+select * 
+from aluno_curso;
