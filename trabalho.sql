@@ -88,3 +88,13 @@ values (null,"PEDRO","2006-11-24");
 select nome, titulo
 from  autores a
 left join  livros l  on a.id = l.autor_id;
+
+-- decimo quarto --
+select nome, curso
+from alunos a
+right join matriculas m on m.id  = a.id;
+
+-- decimo quinto --
+select nome, curso
+from alunos a
+inner join matriculas m on m.id  = a.id;
