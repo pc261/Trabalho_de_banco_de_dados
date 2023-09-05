@@ -79,3 +79,12 @@ right join matriculas m on m.id  = a.id;
 
 select * 
 from aluno_curso;
+
+-- decimo terceiro -- 
+
+insert into autores(id, nome, nascimento)
+values (null,"PEDRO","2006-11-24");
+
+select nome, titulo
+from  autores a
+left join  livros l  on a.id = l.autor_id;
