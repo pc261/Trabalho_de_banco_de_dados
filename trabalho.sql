@@ -1,0 +1,2 @@
+-- primeiro -- 
+ select * from livros;
